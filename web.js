@@ -10,10 +10,10 @@ app.get('/', function(request, response) {
  
  fs.readFileSync('index.html', 'utf8', function(err,data){
   if(err) throw err;
-   console.log(data);
+   var buffer2 = data;
  });
 
-// response.send('prueba');
+response.send(data.toString());
 });
 
 var port = process.env.PORT || 5000;
