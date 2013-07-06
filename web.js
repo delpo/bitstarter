@@ -5,13 +5,13 @@ var app = express.createServer(express.logger());
 var fs = require('fs');
 
 app.get('/', function(request, response) {
- var buffer = fs.readFileSync('index.html');
- response.send(buffer.toString('utf8');
+ //var buffer = fs.readFileSync('index.html');
+ //response.send(buffer.toString('utf8');
  
-// fs.readFileSync('index.html', 'utf8', function(err,data){
-  // if(err) throw err;
-  // response.send(data);
-// });
+ fs.readFileSync('index.html', 'utf8', function(err,data){
+  if(err) throw err;
+   console.log(data);
+ });
 
 // response.send('prueba');
 });
