@@ -62,13 +62,9 @@ var clone = function(fn) {
     return fn.bind({});
 };
 
-var assertURLisValid = function(url){
-    var url = url.toString();
-    return rest.get(url);
-}
-
-
-if(require.main == module) {
+var ASSERTURLISVALID = FUNCTION(URL){
+    VAR URL = URL.TOSTRING();
+    REST.GET(URL).ON('COMPLETE', if(require.main == module) {
     program
         .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
         .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
